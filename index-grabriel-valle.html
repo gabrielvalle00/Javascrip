@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/favicon.png" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css-gabriel-valle.css">
+    <title>Exercicios</title>
+</head>
+<body>
+
+    <!--Area do triangulo-->
+
+    <div class="triangulo">
+
+    <fieldset>
+    <h2>Calculo da área do Triangulo</h2>
+    <h3>Digite a base do triangulo:</h3>
+    <input type="text" id="base">
+
+    <h3>Digite a altura do triangulo:</h3>
+    <input type="text" id="altura">
+
+    <h3>Resultado:</h3>
+    <input type="text" id="Resultado" disabled="disabled">
+    <br>
+    <br>
+
+    <button onclick="caluculoAreaTriangulo()">Calcular</button>
+    </fieldset>
+
+    </div>
+
+    <!-- função que retorne o cubo -->
+   
+    <br>
+    <br>
+
+    <div class="cubo">
+
+    <fieldset>
+        <h2>Cubo</h2>
+        <h3>Digite um valor:</h3>
+        <input type="text" id="cubo">
+    
+        <h3>Resultado:</h3>
+        <input type="text" id="valor-cubo" disabled="disabled">
+        <br>
+        <br>
+    
+        <button onclick="caluculoCubo()">Calcular</button>
+        </fieldset>
+      
+    </div>    
+
+<!--  conversão de uma temperatura -->
+
+<br>
+<br>
+
+<fieldset>
+    <div class="temperatura">
+
+    <section class='conteudos'>
+    
+        <h1>Conversor de Temperaturas</h1>
+        <p class='instrucoes'>Use o slider da escala de graus Celsius para converter automaticamente.</p>
+        <button id='btnZerar' onClick="zerar()">Zerar</button>
+    
+        <div class="form-group">
+    
+            <label for="celsius">Celsius</label>
+            <input type="number" min='-273' max='100' step='0.01' name="numeroC" id="numeroC" value='0' disabled /> °C
+
+            <div class='slider'>
+
+                <span id='minC'>-273.00</span>
+
+                <input
+                    type="range"
+                    min='-273' max='100' step='0.01'
+                    name="celsius" id="celsius"
+                    value='0.00'
+                    list="marcas"
+                    onChange='atualizaC(); atualizaF();'
+                    class="animar"
+                    autofocus
+                />
+
+                <span id='maxC'>100.00</span>
+
+            </div>
+        </div>
+
+<datalist id="marcas">
+    <option value="-100"><option value="-90"><option value="-80"><option value="-70"><option value="-60"><option value="-50"><option value="-40"><option value="-30"><option value="-20"><option value="-10">
+    <option value="0"><option value="10"><option value="20"><option value="30"><option value="40"><option value="50"><option value="60"><option value="70"><option value="80"><option value="90"><option value="100">
+</datalist>
+
+        <div class="form-group">
+
+            <label for="fahrenheit">Fahrenheit</label>
+            <input type="number" min='-459' max='212' step='0.01' name="numeroF" id="numeroF" disabled> °F
+
+            <div class='slider'>
+                <span id='minC'>-459.40</span>
+                <input type="range" min='-459' max='212' step='0.01' name="fahrenheit" id="fahrenheit" value='32.00' />
+                <span id='maxC'>212.00</span>
+            </div>
+        </div>
+    </div>
+</fieldset>
+
+
+<!-- Desconto -->
+
+<br>
+<br>
+
+<div class="desconto">
+
+<fieldset>
+
+    <h3>Desconto de 5% em cima de qualquer produto</h3>
+    
+    <h3>Valor do Produto:</h3>
+    <input type="text" id="valor">
+    <button onclick="descontando()">Calcular</button>
+
+    <h3>O valor do Desconto Equivale a:</h3>
+    <input type="text" id="valorDesconto" disabled="disabled">
+
+    <h3>E o valor do produto menos o valor do desconto é igual;</h3>
+    <input type="text" id="valorMenosDesconto" disabled="disa
+    ">
+
+</fieldset>
+
+</div>
+
+<!-- maior de idade -->
+
+<br>
+<br>
+
+<div class="maior-de-idade">
+
+<fieldset>
+
+    <h3>Digite o ano atual</h3>
+    <input type="text" id="anoAtual">
+
+    <h3>Digite o ano do seu nascimento</h3>
+    <input type="text" id="anoNascimento">
+
+    <button id="text" onclick="maiorOuMenor()">Confirmar</button>
+
+    <h3>Você é maior de idade?: </h3>
+    <input type="text" id="respostaMaiorIdade" disabled="disabled">
+
+</fieldset>    
+
+</div>
+
+<!-- carro novo -->
+
+<br>
+<br>
+
+<div class="carro-novo">
+
+<fieldset>
+    <h3>Quer saber quantos litros de combustivel você pode comprar com o dinheiro que você tem?</h3><br>
+
+    <h3>Primeiro, informe o valor que você possui em mãos:</h3>
+    <input type="text" id="dinheiro">
+    <button id="calcularCompra" onclick="valorEmMaos()">Calcular</button>
+
+    <h3>De acordo com os calculos, você pode comprar <input class="fundo" type="text" id="litros" disabled="disabled"> litros de gasolina.<br>
+        E seu carro pode rodar <input class="fundo" type="text" id="quilometros" disabled="disabled"> quilômetros.
+    </h3>
+    
+</fieldset>
+
+</div>
+    
+    <script src="script-gabriel-valle.js"></script>
+</body>
+</html>
